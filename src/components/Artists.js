@@ -9,7 +9,6 @@ const Artists = ({artists, title}) => {
                     <h2>{ artist.name }</h2>
                     <p>Favourite songs: { artist.songs }</p>
                     <p>Artist is from: {artist.location}</p>
-                    {/* <img src={window.location.origin + artist.img}></img> */}
                 </div>
     ))
     }    
