@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin"); //use htmlwebpackplugi
 const config = {
     entry: path.resolve(__dirname, "../src/index.js"), //entrypoint is source folder/index.js, can change to other file name e.g. /extra.js - place to start building dependencies
     output: {
-        path: path.resolve(__dirname, 'dist'), //says where we want to put it - dist folder
+        path: path.resolve(__dirname, '../dist'), //says where we want to put it - dist folder
         filename: 'bundle.js', //rename to bundle.js from main.js
         publicPath: "/",
         clean: true //clean up everything in folder as we go such as old versions, if u version bundles, they pile up

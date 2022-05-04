@@ -55,3 +55,8 @@
     color: #f1356d;
     margin-bottom: 8px;
   }
+
+  .artist-preview img {
+    border-radius: 15px;
+    height: 200px;
+  }

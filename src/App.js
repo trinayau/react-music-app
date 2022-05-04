@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Artists from './components/Artists';
 import './App.css';
 
+
 function App() {
   const [artists, setArtists] = useState([
     { name: 'Powfu', songs: 'Snowflake', location: 'Vancouver', img: '/assets/images/powfu.jpeg', id: 1 },
