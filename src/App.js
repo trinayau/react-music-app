@@ -1,10 +1,12 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
 import Navbar from './components/Navbar'
-import Artists from './components/Artists';
+import {Artists} from './components';
 import './App.css';
+import {Routes, Route} from "react-router-dom";
+import {AboutPage, IndexPage, RandomPage, NotFoundPage, ArtistsPage, ArtistPage} from "./pages";
+import {default as Layout} from './layouts'
 import axios from 'axios';
-
 
 
 function App() {
@@ -67,8 +69,19 @@ const [artists, setArtists] = useState([])
   return (
     <>
       <Navbar />
-      <h1>Favourite Artists</h1>
-      <Artists/>
+   
+      <Routes>
+        <Route path="/" element={<Layout/>}>   
+            <Route path="/" element={<IndexPage/>}/>   
+            <Route path="about" element={<AboutPage/>}/>
+            <Route path="artists">
+            <Route path="/artists" element={<ArtistsPage/>}/>
+            <Route path=":id" element={<ArtistPage/>}/>
+              </Route>
+            <Route path="random" element={<RandomPage/>}/>
+            <Route path="*" element={<NotFoundPage/>}/>
+        </Route>
+    </Routes>
       {/* <Artists title="Artists" artists={artists}/> */}
       {/* {!token ?
                     <a href={`${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=${RESPONSE_TYPE}`}>Login

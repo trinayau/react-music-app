@@ -22,19 +22,20 @@
     color: #f1356d;
     text-align: center;
     margin: 20px;
+    font-size: 50px;
     padding: 10px 16px;
   }
-  /* .navbar .links {
+  .navbar .links {
     margin-left: auto;
-  } */
-  /* .navbar a {
+  } 
+.navbar a {
     margin-left: 16px;
     text-decoration: none;
     padding: 6px;
   }
   .navbar a:hover {
     color: #f1356d;
-  } */
+  } 
   .content {
     max-width: 600px;
     margin: 40px auto;
@@ -42,13 +43,19 @@
   }
 
   /* blog previews / list */
+
+  .artist-list {
+    text-align: center;
+  }
 .artist-preview {
     padding: 10px 16px;
     margin: 20px 0;
     border-bottom: 1px solid #fafafa;
+    text-align: center;
   }
   .artist-preview:hover {
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+    background-color: #FAE0E4;
+    border-radius: 14px;
   }
   .artist-preview h2 {
     font-size: 20px;
@@ -60,3 +67,26 @@
     border-radius: 15px;
     height: 200px;
   }
+  
+  /* Nav */
+
+  nav a{
+    font-size: 25px;
+    text-decoration: none;
+    transition: all ease-in-out 0.2s;
+  }
+
+  nav a:hover {
+    color:#f1356d
+  }
+
+
+/* random page */
+.random h2 {
+  color:#f1356d;
+}
+
+.random button {
+  padding: 10px 25px;
+  margin: 10px 10px;
+}
